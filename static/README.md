@@ -3,4 +3,4 @@ Add static files here. Files in this directory will be copied directly to `dist`
 This file should be deleted.
 
 
-- 线上地址  
+- 线上地址    https://gridsome-nine-xi.vercel.app/new/main
