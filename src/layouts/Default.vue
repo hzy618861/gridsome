@@ -105,8 +105,7 @@
           <el-row>
             <el-col :span="10">
               <div>
-                © 2018 GitHub-{{obj.blogTitle}}&emsp;&emsp;
-                <a href="https://github.com/GitHub-Laziji" target="_blank">Profile</a>&emsp;&emsp;
+                © 2018 GitHub-{{ obj.blogTitle }}&emsp;&emsp; <a href="https://github.com/GitHub-Laziji" target="_blank">Profile</a>&emsp;&emsp;
                 <a href="https://github.com/GitHub-Laziji/vblog" target="_blank">VBlog</a>
               </div>
             </el-col>
@@ -236,7 +235,9 @@ export default {
     $route: {
       handler: function (o, n) {
         const index = this.constantRouterMap.findIndex((item) => this.$route.path.indexOf(item.index) != -1);
-        this.active = this.constantRouterMap[index].index;
+        if (index != -1) {
+          this.active = this.constantRouterMap[index].index;
+        }
       },
       immediate: true,
     },
